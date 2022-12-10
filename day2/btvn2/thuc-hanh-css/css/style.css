@@ -1,0 +1,51 @@
+.clickbox {
+    background-color: rgb(121, 147, 224);
+    border: 2px solid rgb(109, 138, 228);
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+    margin-left: 15px; 
+    text-decoration-line: none; 
+    width: 1000px;
+}
+.heading {
+    width: 1000px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: rgb(10, 73, 136);
+    text-shadow: 2px 2px rgb(50, 83, 190) ;
+    font-size: 40px;
+}
+.quotecontainer {
+    width: 1000px;
+    border-left: 4px solid rgb(109, 138, 228);
+    padding: 0 1em;
+    padding-top: 0px;
+    padding-right: 1em;
+    padding-bottom: 0px;
+    padding-left: 1em;
+    color: rgb(150, 134, 134);
+    display: block;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+.container{
+    width: 1000px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.globalcontainer {
+    width: 1300px;
+    margin-left: 200px;
+    margin-right: 15px;
+    background-color: rgb(241, 227, 209);
+}
+
+.code {
+    color: red;
+    background-color: rgb(226, 215, 215);
+    border: 2px solid rgb(214, 207, 207);
+}
