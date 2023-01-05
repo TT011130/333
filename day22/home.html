@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f2cf2e2370.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header"> Free to play game
+        <div class="container">
+            <form name="filter">
+                <div class="filter-option">
+                    <label for="platform">Platform:</label>
+                    <select name="platform" id="platform">
+                        <option value="all">All Platform</option>
+                        <option value="window">Window (PC)</option>
+                        <option value="browser">Browser</option>
+                    </select>
+                </div>
+            </form>
+
+            <form name="genre">
+                <div class="genre-option">
+                    <label for="genre">Genre/Tag:</label>
+                    <select name="genre" id="genre">
+                        <option value="all">All Genre</option>
+                        <option value="mmo">MMO</option>
+                        <option value="mmorpg">MMORPG</option>
+                        <option value="shooter">Shooter</option>
+                    </select>
+                </div>
+            </form>
+
+            <form name="sort">
+                <div class="sort-option">
+                    <label for="sort">Sort By:</label>
+                    <select name="sort" id="sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="released">Released Date</option>
+                        <option value="lphabetical">Alphabetical</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </header>
+    <section class="game-list">
+        <div class="game-container">
+            <div class="game-link">
+                <a href="https://www.freetogame.com/overwatch-2">
+                    <div class="game-thumbnail">
+                        <img src="https://www.freetogame.com/g/540/thumbnail.jpg" alt="overwatch-2">
+                    </div>
+                
+                    <div class="game-detail">
+                        <div class="game-title">Overwatch 2</div>
+                        <div class="game-status">FREE</div>
+                    </div>
+                    
+                    <div class="game-describe">A hero-focused first-person tea...</div>
+                    
+                
+                    <div class="game-info">
+                    <div class="game-genre">Shooter</div>
+                    <div class="game-platform"><i class="fa-brands fa-windows"></i></div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>

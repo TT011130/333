@@ -93,22 +93,22 @@ calcTime("20:30:10", 10);
   
    
 function isPalindrome(str) {
-
+    let normalStr = str.toLowerCase().replaceAll(" ", "");
     // Tìm length của str
-    const len = str.length;
+    const len = normalStr.length;
 
     // lặp qua một nửa length của str
     for (let i = 0; i < len / 2; i++) {
 
         // kiểm tra xem nửa đầu có bằng nửa sau không
-        if (str[i] !== str[len - 1 - i]) {
+        if (normalStr[i] !== normalStr[len - 1 - i]) {
             return false;
         }
     }
     return true;
 }
 
-console.log(isPalindrome("Hello"));
+console.log(isPalindrome("Race car"));
   
   /**
   * Một con ốc sên leo từ đáy giếng lên miệng giếng, biết ban ngày leo
