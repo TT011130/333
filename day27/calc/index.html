@@ -25,13 +25,6 @@
             gap: 2px;
         }
 
-        .result {
-            width: 208px;
-            height: 66px;
-            background-color: #425062;
-            padding-top: 2px;
-        }
-
         .formula {
             font-family: 'Nunito';
             font-style: normal;
@@ -44,16 +37,17 @@
             padding-right: 15px;
         }
         
-        .show-result {
+        .display-box {
             font-family: 'Nunito';
             font-style: normal;
             font-weight: 700;
             font-size: 30px;
             line-height: 41px;
             color: #FFFFFF;
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 15px;
+            width: 200px;
+            height: 61px;
+            background-color: #425062;
+            padding-top: 2px;
         }
        
         .numpad {
@@ -94,56 +88,56 @@
         <div class="calc">
             <div class="left">
                 <div class="result">
-                    <div class="formula">1+2</div>
-                    <div class="show-result">1234</div>
+                    
+                        <input class="display-box" type="text" id="result" disabled />
                 </div>
                 <div class="numpad">
                     <div class="number-1">
-                        <button class="btn">1</button>
+                        <input class="btn" type="button" value="1" onclick="display('1')" />
                     </div>
             
                     <div class="number-2">
-                        <button class="btn">2</button>
+                        <input class="btn" type="button" value="2" onclick="display('2')" />
                     </div>
             
                     <div class="number-3">
-                        <button class="btn">3</button>
+                        <input class="btn" type="button" value="3" onclick="display('3')" />
                     </div>
             
                     <div class="number-4">
-                        <button class="btn">4</button>
+                        <input class="btn" type="button" value="4" onclick="display('4')" />
                     </div>
             
                     <div class="number-5">
-                        <button class="btn">5</button>
+                        <input class="btn" type="button" value="5" onclick="display('5')" />
                     </div>
             
                     <div class="number-6">
-                        <button class="btn">6</button>
+                        <input class="btn" type="button" value="6" onclick="display('6')" />
                     </div>
             
                     <div class="number-7">
-                        <button class="btn">7</button>
+                        <input class="btn" type="button" value="7" onclick="display('7')" />
                     </div>
             
                     <div class="number-8">
-                        <button class="btn">8</button>
+                        <input class="btn" type="button" value="8" onclick="display('8')" />
                     </div>
             
                     <div class="number-9">
-                        <button class="btn">9</button>
+                        <input class="btn" type="button" value="9" onclick="display('9')" />
                     </div>
             
                     <div class="clear">
-                        <button class="btn">C</button>
+                        <input class="btn" type="button" value="C" onclick="clearScreen()" id="btn" />
                     </div>
             
                     <div class="number-0">
-                        <button class="btn">0</button>
+                        <input class="btn" type="button" value="0" onclick="display('0')" />
                     </div>
             
                     <div class="dot">
-                        <button class="btn">.</button>
+                        <input class="btn" type="button" value="." onclick="display('.')" /> 
                     </div>
             
                 </div>
@@ -151,26 +145,28 @@
             
             <div class="function">
                 <div class="multi">
-                    <button class="btn">*</button>
+                        <input class="btn" type="button" value="*" onclick="display('*')" /> 
                 </div>
 
                 <div class="divide">
-                    <button class="btn">/</button>
+                    <input class="btn" type="button" value="/" onclick="display('/')" /> 
                 </div>
 
                 <div class="plus">
-                    <button class="btn">+</button>
+                        <input class="btn" type="button" value="+" onclick="display('+')" />
                 </div>
 
                 <div class="minus">
-                    <button class="btn">-</button>
+                        <input class="btn" type="button" value="-" onclick="display('-')" /> 
                 </div>
 
                 <div class="equal">
-                    <button class="btn">=</button>
+                        <input class="btn" type="button" value="=" onclick="calculate()" id="btn" />
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
