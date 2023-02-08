@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'GeneralSans';
+    font-family: 'GeneralSans-Variable';
     src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
          url('../fonts/GeneralSans-Variable.woff') format('woff'),
          url('../fonts/GeneralSans-Variable.ttf') format('truetype');
@@ -56,9 +56,26 @@ body {
 .navbar .navbar-brand {
     --bs-navbar-brand-font-size: 28px;
     --bs-navbar-brand-margin-end: 80px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28.2353px;
+    line-height: 32px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+}
+
+.nav-link {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
 }
 .text {
-    font-family: 'General Sans Variable';
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 600;
     font-size: 86px;
@@ -66,11 +83,16 @@ body {
     color: #000000;
 }
 
+.hero-section {
+    height: 800px;
+}
 .title {
     margin-top: 114px;
 }
 
 .text.sub-title {
+    margin-top: 24px;
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -105,4 +127,151 @@ body {
     position: absolute;
     top: 19.47px;
     left: 45.51px;
+}
+
+.form-control {
+    width: 309px;
+    height: 62px;
+    padding: 20px 18px;
+    background: #FAFAFA;
+    border-radius: 37px;
+}
+
+.mb-3 {
+    gap: 12px;
+    margin-top: 52px;
+}
+
+.btn-hero {
+    border-radius: 70px;
+    width: 114px;
+    height: 62px;   
+    padding: 20px 24px;
+}
+
+.cooperation {
+    background: #FAFAFA;
+    height: 552px;
+}
+
+.cooperation-title {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: capitalize;
+    width: 280px;
+    height: 108px;
+    margin-top: 78px;
+}
+
+.cooperation-description {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    width: 413px;
+    height: 84px;
+    color: #252525;
+    text-transform: capitalize;
+    margin-top: 90px;
+    margin-left: 36px;
+}
+
+.company-logo {
+    display: flex;
+    margin-top: 89px;
+    gap: 80px;
+    padding: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.company-logo.row-2 {
+    margin-top: 94px;
+}
+
+.strat-left {
+    width: 505px;
+    height: 310px;
+    
+    flex-direction: column;
+}
+
+.strat-left-top {
+    display: flex;
+    gap: 136px;
+}
+
+.strat-left-bot {
+    display: flex;
+    gap: 158px;
+}
+
+.bot-right {
+    width: 158px;
+    height: 134px;
+}
+.strat-bold {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 86px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.strat-light {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bot-right .strat-light {
+    text-transform: capitalize;
+}
+
+.top-right .strat-light {
+    width: 155px;
+    height: 48px;
+}
+
+.strat-right-title {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.strat-right-subtitle {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
+}
+
+.stra-right-link {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: #3461FF;
 }
