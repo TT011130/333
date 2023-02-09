@@ -25,7 +25,7 @@
     url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1344px) {
     .container {
         max-width: 1264px;
     }
@@ -425,4 +425,9 @@ body {
     line-height: 32px;
     text-transform: capitalize;
     color: #FFFFFF;
+}
+
+.cta-banner-title {
+    top: 66px;
+    left: 109px;
 }
