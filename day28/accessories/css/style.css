@@ -194,10 +194,14 @@ body {
     margin-top: 94px;
 }
 
+.strat {
+    height: 520px;
+}
+
 .strat-left {
     width: 505px;
     height: 310px;
-    
+    margin-top: 103px;
     flex-direction: column;
 }
 
@@ -226,7 +230,7 @@ body {
 }
 
 .strat-light {
-    font-family: 'General Sans Variable';
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -243,8 +247,11 @@ body {
     height: 48px;
 }
 
+.strat-right {
+    margin-top: 103px;
+}
 .strat-right-title {
-    font-family: 'General Sans Variable';
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -255,7 +262,7 @@ body {
 }
 
 .strat-right-subtitle {
-    font-family: 'General Sans Variable';
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -265,8 +272,8 @@ body {
     margin-bottom: 50px;
 }
 
-.stra-right-link {
-    font-family: 'General Sans Variable';
+.strat-right-link {
+    font-family: 'GeneralSans-Variable';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -274,4 +281,148 @@ body {
     text-decoration-line: underline;
     text-transform: capitalize;
     color: #3461FF;
+}
+
+.insight {
+    height: 776px;
+}
+
+.insight-left {
+    margin-top: 86px;
+    height: 584px;
+}
+
+.insight-title {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.insight-subtitle {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 12px;
+    margin-bottom: 46px;
+}
+
+.insight-right {
+    margin-top: 86px;
+    height: 584px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.insight-right-title {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.insight-right-subtitle {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.insight-right-left {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 292px;
+}
+
+.insight-right-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 292px;
+}
+
+.work {
+    height: 860px;
+}
+
+.work-heading {
+    margin-top: 79px;
+    margin-bottom: 60px;
+}
+.work-title {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.work-subtitle {
+    font-family: 'GeneralSans-Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.work-row-title {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 12px;
+    margin-top: 16px;
+}
+
+.work-row-subtitle {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 48px;
+}
+
+.see-more {
+    background: #3461FF;
+    border-radius: 64px;
+    width: 203px;
+    height: 64px;
+    padding: 16px 48px;
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
