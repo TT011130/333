@@ -5,54 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #1D206D;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img style="width: 30px; height: 30px;" src="images/414-4141650_d20-svg-avatar-20-sided-dice-clip-art.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link active text-white" aria-current="page" href="#">Trang chủ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Boardgame
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">       
-                        <span class="theme">Nền sáng</span>
-                    </li>   
-                    <li class="nav-item">       
-                        <a class="nav-link login" href="">Login</a>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Chơi ở đâu</a>
                     </li>
-                    <li class="nav-item">       
-                        <a class="nav-link login" href="">Login</a>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Trợ giúp</a>
                     </li>
                 </ul>
 
-          </div>
+                <div class="form-check form-switch theme">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label text-white" for="flexSwitchCheckDefault">Nền sáng</label>
+                  </div>
+                <div class="navbar-nav login">
+                    <a class="nav-link text-white" href="">Login</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/Group.png" alt=""> VN
+                    </a>
+                <ul class="dropdown-menu language" >
+                    
+                    <li><a class="dropdown-item" href="#">VN</a></li>
+                    <li><a class="dropdown-item" href="#">EN</a></li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <div class="search-section">
+        <div class="container">
+            <div class="input-group">
+                <button class="btn bg-white btn-outline-secondary text-black dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tất cả</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action before</a></li>
+                    <li><a class="dropdown-item" href="#">Another action before</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+                <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+                <button class="btn bg-primary text-white btn-outline-secondary" type="button" id="button-addon1">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script/switchtheme.js"></script>
 </body>
 </html>
