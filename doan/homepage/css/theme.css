@@ -1,11 +1,16 @@
-/* light.css */
 body {
     background-color: #f2f2f2;
     color: #333;
 }
   
-  /* dark.css */
+  
 body.dark-mode {
     background-color: #333;
     color: #f2f2f2;
   }
+
+nav {
+  background-color: #f1f4fa;
+  color: #333;
+}
+

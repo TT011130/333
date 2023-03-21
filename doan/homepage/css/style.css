@@ -1,8 +1,14 @@
 .search-section {
-    background-color: #C0C6DF;
+    background-color: #ced5f0;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.hero-section{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
 

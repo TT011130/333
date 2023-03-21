@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg" style="background-color: #1D206D;">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img style="width: 30px; height: 30px;" src="images/414-4141650_d20-svg-avatar-20-sided-dice-clip-art.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Boardgame
                         </a>
                         <ul class="dropdown-menu">
@@ -33,22 +32,23 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Chơi ở đâu</a>
+                        <a class="nav-link active" aria-current="page" href="#">Chơi ở đâu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Trợ giúp</a>
+                        <a class="nav-link active" aria-current="page" href="#">Trợ giúp</a>
                     </li>
                 </ul>
 
                 <div class="form-check form-switch theme">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    <label class="form-check-label text-white" for="flexSwitchCheckDefault">Nền sáng</label>
-                  </div>
+                    <input class="form-check-input" onclick="toggleDarkMode()" type="checkbox" role="switch" id="flexSwitchCheckChecked" data-component="theme-toggle" checked>
+                    <span class="form-check-label light-theme" for="flexSwitchCheckDefault">Nền</span>
+                   
+                </div>
                 <div class="navbar-nav login">
-                    <a class="nav-link text-white" href="">Login</a>
+                    <a class="nav-link" href="">Login</a>
                 </div>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="images/Group.png" alt=""> VN
                     </a>
                 <ul class="dropdown-menu language" >
@@ -76,9 +76,30 @@
             </div>
         </div>
     </div>
-    
 
+    <div class="hero-section">
+        <div class="hero-filter">
+            <button class="button hottest">Game hot</button>
+            <button class="button newest">Game mới nhất</button>
+            <button class="button wip">Game sắp ra mắt</button>
+        </div>
+
+        <div class="hero-slider">
+            <div class="slider-main-card">
+                <div class="background-image">
+                    <img src="images/image 6.png" alt="">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/image 5.png" alt="">
+                </div>
+                <div class="game-description">
+                    <div class="game-name"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="script/switchtheme.js"></script>
+    <script src="script/theme.js"></script>
 </body>
-</html>
