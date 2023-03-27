@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Board Game Store</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Board Game Store</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Cart</a></li>
+				<li><a href="#">Sign In</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h2>Featured Games</h2>
+			<div class="game">
+				<h3>Ticket to Ride Board Game</h3>
+				<img src="images/game1.jpg" alt="Ticket to Ride Board Game">
+				<p>Price: $30</p>
+				<button onclick="addToCart('Ticket to Ride Board Game', 30)">Add to Cart</button>
+			</div>
+
+			<div class="game">
+				<h3>Catan Board Game</h3>
+				<img src="images/game2.jpg" alt="Catan Board Game">
+				<p>Price: $40</p>
+				<button onclick="addToCart('Catan Board Game', 40)">Add to Cart</button>
+			</div>
+		</section>
+
+		<section>
+			<h2>All Games</h2>
+			<form>
+        <div class="game-list">
+          <h2>Games</h2>
+          <input type="text" id="search-input" placeholder="Search...">
+          <ul id="game-list-ul">
+            <li>Monopoly</li>
+            <li>Settlers of Catan</li>
+            <li>Scrabble</li>
+            <li>Risk</li>
+            <li>Ticket to Ride</li>
+            <li>Battleship</li>
+            <li>Clue</li>
+            <li>Chess</li>
+            <li>Checkers</li>
+          </ul>
+        </div>
+				<!-- <label for="search">Search:</label> -->
+				<!-- <input type="text" id="search" name="search"> -->
+				<label for="category">Category:</label>
+				<select id="category" name="category">
+					<option value="">All</option>
+					<option value="Strategy">Strategy</option>
+					<option value="Party">Party</option>
+					<option value="Family">Family</option>
+					<option value="Kids">Kids</option>
+				</select>
+				<button type="submit">Search</button>
+			</form>
+
+			<div id="games-container">
+				<div class="game">
+					<h3>Ticket to Ride Board Game</h3>
+					<img src="images/game1.jpg" alt="Ticket to Ride Board Game">
+					<p>Price: $30</p>
+					<button onclick="addToCart('Ticket to Ride Board Game', 30)">Add to Cart</button>
+				</div>
+
+				<div class="game">
+					<h3>Catan Board Game</h3>
+					<img src="images/game2.jpg" alt="Catan Board Game">
+					<p>Price: $40</p>
+					<button onclick="addToCart('Catan Board Game', 40)">Add to Cart</button>
+				</div>
+
+				<div class="game">
+					<h3>Monopoly Board Game</h3>
+					<img src="images/game3.jpg" alt="Monopoly Board Game">
+					<p>Price: $25</p>
+					<button onclick="addToCart('Monopoly Board Game', 25)">Add to Cart</button>
+				</div>
+
+				<!-- More games... -->
+			</div>
+<!-- Shopping cart -->
+<h2>Shopping Cart</h2>
+<table id="cart-table">
+<thead>
+<tr>
+  <th>Item</th>
+  <th>Price</th>
+  <th>Quantity</th>
+  <th>Remove</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+<tfoot>
+<tr>
+  <td colspan="3" align="right">Total Price:</td>
+  <td id="total-price">$0.00</td>
+</tr>
+</tfoot>
+</table>
+
+
+		</section>
+	</main>
+
+	<footer>
+		
+<!-- Footer content goes here -->
+</footer>
+
+<script>
+	var cart = [];
+
+  function addToCart(name, price) {
+			var item = {name: name, price: price, quantity: 1};
+			for (var i = 0; i < cart.length; i++) {
+				if (cart[i].name === name) {
+					cart[i].quantity++;
+					updateCart();
+					return;
+				}
+			}
+			cart.push(item);
+			updateCart();
+		}
+		
+		function removeFromCart(name) {
+			for (var i = 0; i < cart.length; i++) {
+				if (cart[i].name === name) {
+					if (cart[i].quantity > 1) {
+						cart[i].quantity--;
+					} else {
+						cart.splice(i, 1);
+					}
+					updateCart();
+					return;
+				}
+			}
+		}
+		
+		function calculateTotal() {
+			var total = 0;
+			for (var i = 0; i < cart.length; i++) {
+				total += cart[i].price * cart[i].quantity;
+			}
+			return total;
+		}
+
+  function updateCart() {
+  // Update shopping cart table
+  var table = document.getElementById("cart-table");
+  var tbody = table.getElementsByTagName("tbody")[0];
+  tbody.innerHTML = "";
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var row = document.createElement("tr");
+    var nameCell = document.createElement("td");
+    nameCell.innerText = item.name;
+    var priceCell = document.createElement("td");
+    priceCell.innerText = "$" + item.price.toFixed(2);
+    var quantityCell = document.createElement("td");
+    quantityCell.innerText = item.quantity;
+    var removeCell = document.createElement("td");
+    var removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.addEventListener("click", (function(item) {
+      return function() {
+        removeFromCart(item.name);
+      }
+    })(item));
+    removeCell.appendChild(removeButton);
+    row.appendChild(nameCell);
+    row.appendChild(priceCell);
+    row.appendChild(quantityCell);
+    row.appendChild(removeCell);
+    tbody.appendChild(row);
+  }
+  // Update total price
+  var totalCell = document.getElementById("total-price");
+  totalCell.innerText = "$" + calculateTotal().toFixed(2);
+}
+const gameListUl = document.getElementById("game-list-ul");
+const searchInput = document.getElementById("search-input");
+
+searchInput.addEventListener("keyup", function() {
+  const searchQuery = searchInput.value.toLowerCase();
+  const games = gameListUl.getElementsByTagName("li");
+  for (let i = 0; i < games.length; i++) {
+    const gameName = games[i].innerHTML.toLowerCase();
+    if (gameName.indexOf(searchQuery) > -1) {
+      games[i].style.display = "";
+    } else {
+      games[i].style.display = "none";
+    }
+  }
+});
+</script>
+
+<footer>
+  <p>&copy; 2023 Board Game Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
