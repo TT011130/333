@@ -11,4 +11,34 @@
     margin-left: 100px;
 }
 
+.hero-filter {
+    margin-bottom: 20px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.button {
+border: none;
+}
+
+.slider-main-card {
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    
+}
+
+.thumbnail {
+    position: absolute;
+}
+
+.game-description {
+    position: absolute;
+    left: 300px;
+    color: #f2f2f2;
+}
 
