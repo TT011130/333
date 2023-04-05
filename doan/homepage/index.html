@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
 </head>
 <body>
@@ -79,32 +80,62 @@
     </div>
 
     <div class="hero-section">
-        <div class="hero-filter">
-            <button class="button hottest">Game hot</button>
-            <button class="button newest">Game mới nhất</button>
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'tab1')">Game hot</button>
+            <button class="tablink" onclick="openTab(event, 'tab2')">Game mới nhất</button>
+            <button class="tablink" onclick="openTab(event, 'tab3')">Game sắp ra mắt</button>
         </div>
         
-        <div class="slider-main-card">
-            <div class="background-image">
-                 <img src="images/image 6.png" style="width: 500px; height: 500px;" alt="">
+        <div id="tab1" class="tabcontent active">
+            <div class="slider-main-card">
+                <div class="background-image">
+                    <img src="images/image 6.png" style="width:1200px; height: 500px;" alt="">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
+                </div>
+                <div class="game-description">
+                    <div class="game-name"> Starwar</div>
+                    <div class="rating">Xếp hạng: 7.9</div>
+                    <div class="game-info">
+                        <ul>
+                            <li class="player">1-2 người chơi</li>
+                            <li class="time">30 phút chơi</li>
+                            <li class="age">Độ tuổi: 12+</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="thumbnail">
-                <img src="images/image 5.png" style="width: 100px; height: 200px;" alt="">
-            </div>
-            <div class="game-description">
-                <div class="game-name"> Starwar</div>
-                <div class="rating">Xếp hạng: 7.9</div>
         
+            <div class="slider-sub-card">
+                
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                </div>
+                <button class="slider-button-next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="slider-button-prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </buttton>
             </div>
         </div>
+    </div>          
         
-        <div class="slider-sup-card"></div>
-                    
-        
-        
-    </div>
-    
-      <script src="./lib/swiper/swiper-bundle.min.js"></script>
+   
+    <script src="https://kit.fontawesome.com/f2cf2e2370.js" crossorigin="anonymous"></script>
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/swiper.js"></script>
 <!-- Import axios-->
     <script src="./lib/axios/axios.min.js"></script>
 <!-- Import js bootstrap-->
