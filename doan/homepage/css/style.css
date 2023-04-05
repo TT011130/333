@@ -10,6 +10,11 @@ img {
     vertical-align: middle;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .search-section {
     background-color: #ced5f0;
     height: 100px;
@@ -80,9 +85,9 @@ img {
 
 
 .game-info {
-    border-top: 2px solid white;
+    border-top: 4px solid black;
     position: absolute;
-    width: 500px;
+    width: 470px;
     top: 200px;
 }
 
@@ -90,6 +95,9 @@ img {
     list-style: none;
     display: inline-block;
     padding: 20px;
+    background-color: white;
+    color: black;
+    
 }   
 
 .slider-sub-card {
@@ -137,3 +145,76 @@ img {
     overflow: hidden;
     padding: 0;
   }
+.news-section .container{
+    border-top: 3px solid grey;
+    margin-top: 30px;
+    height: 500px;
+}
+.section-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.section-nav {
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+.news-main-card {
+background-color: white;
+border-radius: 5px;
+height: 365px;
+}
+  .news-header {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid grey;
+    flex-direction: row;
+}
+
+.news-header-text {
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+.news-description {
+    padding: 10px 10px;
+}
+.sub-news-container {
+    border-bottom: 2px solid grey;
+    padding:5px 0;
+}
+.sub-news-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+.author {
+    color: #aaa;
+}
+.news-heading {
+    font-weight: 700;
+}
+.sub-news-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sub-news-container-bottom {
+    padding: 5px 0;
+}
+
+.video-section .container {
+    margin-top: 30px;
+    border-top: 3px solid grey;
+}
+
+
+
+
