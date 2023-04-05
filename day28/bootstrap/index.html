@@ -9,6 +9,10 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="shortcut icon" href="../accessories/images/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../accessories/css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -271,21 +275,111 @@
     </div>
 
     <div class="cta-banner position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="cta-banner-left col-6">
-                    <img class="position-absolute" src="../accessories/images/Group 584.png" alt="">
-                    <div class="cta-banner-title position-absolute z-1">
-                        start your journey with us now
-                    </div>
+        <div class="row">
+            <div class="cta-banner-left col-6">
+                <img class="position-absolute" src="../accessories/images/Group 584.png" alt="">
+                <div class="cta-banner-title position-absolute z-1">
+                    start your journey with us now
+                </div>
+            </div>
+
+            <div class="cta-banner-right col-6">
+                <div class="cta-banner-right-text">Use this section to describe your company and the products you offer. 
+                    You could share your company’s story and details about why you are in business. Use this 
+                    section to describe your company and the products you offer. You could share your company’s story and 
+                </div>
+                <div class="cta-banner-right-link">
+                    <a href="#">Learn more
+                        <img src="../accessories/images/Vector-white.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
 
     </div>
 
+    <div class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="swiper col-12">
+                    <div class="testimonial-header  d-flex justify-content-between">
+                        <div class="testimonial-header-text">
+                            <div class="testimonial-heading">What Our Client Said about us</div>
+                            <div class="testimonial-sub-heading">Use this section to describe your company </div>
+                        </div>
 
+                        <div class="testimonial-header-swipe d-flex">
+                            <div class="carousel-button-prev">
+                                <svg class="" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M50.2497 33.5001C50.2497 34.0554 50.0291 34.5879 49.6364 34.9806C49.2438 35.3732 48.7112 35.5938 48.1559 35.5938H23.8977L32.8883 44.5802C33.0829 44.7749 33.2374 45.006 33.3427 45.2603C33.4481 45.5147 33.5023 45.7873 33.5023 46.0626C33.5023 46.3379 33.4481 46.6105 33.3427 46.8648C33.2374 47.1192 33.0829 47.3503 32.8883 47.545C32.6936 47.7396 32.4625 47.894 32.2082 47.9994C31.9538 48.1048 31.6812 48.159 31.4059 48.159C31.1306 48.159 30.858 48.1048 30.6036 47.9994C30.3493 47.894 30.1182 47.7396 29.9235 47.545L17.361 34.9825C17.166 34.788 17.0113 34.5569 16.9058 34.3025C16.8002 34.0482 16.7459 33.7755 16.7459 33.5001C16.7459 33.2247 16.8002 32.952 16.9058 32.6976C17.0113 32.4432 17.166 32.2122 17.361 32.0177L29.9235 19.4552C30.3167 19.0621 30.8499 18.8412 31.4059 18.8412C31.9619 18.8412 32.4951 19.0621 32.8883 19.4552C33.2814 19.8484 33.5023 20.3816 33.5023 20.9376C33.5023 21.4936 33.2814 22.0268 32.8883 22.42L23.8977 31.4063H48.1559C48.7112 31.4063 49.2438 31.6269 49.6364 32.0196C50.0291 32.4122 50.2497 32.9448 50.2497 33.5001Z" fill="black" fill-opacity="0.3"/>
+                                </svg>
+                                    
+                            </div>
+
+                            <div class="carousel-button-next ">
+                                <svg class="" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7503 33.5001C16.7503 34.0554 16.9709 34.5879 17.3636 34.9806C17.7562 35.3732 18.2888 35.5938 18.8441 35.5938H43.1023L34.1117 44.5802C33.9171 44.7749 33.7626 45.006 33.6573 45.2603C33.5519 45.5147 33.4977 45.7873 33.4977 46.0626C33.4977 46.3379 33.5519 46.6105 33.6573 46.8648C33.7626 47.1192 33.9171 47.3503 34.1117 47.545C34.3064 47.7396 34.5375 47.894 34.7918 47.9994C35.0462 48.1048 35.3188 48.159 35.5941 48.159C35.8694 48.159 36.142 48.1048 36.3964 47.9994C36.6507 47.894 36.8818 47.7396 37.0765 47.545L49.639 34.9825C49.834 34.788 49.9887 34.5569 50.0942 34.3025C50.1998 34.0482 50.2541 33.7755 50.2541 33.5001C50.2541 33.2247 50.1998 32.952 50.0942 32.6976C49.9887 32.4432 49.834 32.2122 49.639 32.0177L37.0765 19.4552C36.6833 19.0621 36.1501 18.8412 35.5941 18.8412C35.0381 18.8412 34.5049 19.0621 34.1117 19.4552C33.7186 19.8484 33.4977 20.3816 33.4977 20.9376C33.4977 21.4936 33.7186 22.0268 34.1117 22.42L43.1023 31.4063H18.8441C18.2888 31.4063 17.7562 31.6269 17.3636 32.0196C16.9709 32.4122 16.7503 32.9448 16.7503 33.5001Z" fill="white"/>
+                                </svg>                           
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="testimonial-card swiper-wrapper">
+                        <div class="card-1 swiper-slide">
+                            <div class="thumbnail-info d-flex">
+                                <div class="thumbnail">
+                                    <img src="../accessories/images/thumbnail.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Amelia Joseph</div>
+                                    <div class="job">Chief Manager</div>
+                                </div>
+                            </div>
+                            <div class="describe">Use this section to describe your company and the products you offer. 
+                                You could share your company’s story and details about why you are in business. </div>
+                        </div>
+                        <div class="card-1 swiper-slide">
+                            <div class="thumbnail-info d-flex">
+                                <div class="thumbnail">
+                                    <img src="../accessories/images/thumbnail.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Amelia Joseph</div>
+                                    <div class="job">Chief Manager</div>
+                                </div>
+                            </div>
+                            <div class="describe">Use this section to describe your company and the products you offer. 
+                                You could share your company’s story and details about why you are in business. </div>
+                        </div>
+                        <div class="card-1 swiper-slide">
+                            <div class="thumbnail-info d-flex">
+                                <div class="thumbnail">
+                                    <img src="../accessories/images/thumbnail.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="name">Amelia Joseph</div>
+                                    <div class="job">Chief Manager</div>
+                                </div>
+                            </div>
+                            <div class="describe">Use this section to describe your company and the products you offer. 
+                                You could share your company’s story and details about why you are in business. </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="countup" data-to="245" data-suffix="%"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="
+        https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../accessories/script/script.js"></script>
 </body>
 </html>
