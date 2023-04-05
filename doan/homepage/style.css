@@ -1,0 +1,187 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.game {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.game h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.game img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.game p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.game button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.game button:hover {
+  background-color: #666;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"], form select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #666;
+}
+
+#cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+#cart-table th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+#cart-table td {
+  padding: 10px;
+}
+
+#cart-table td:first-child {
+  font-weight: bold;
+}
+
+#cart-table tfoot td:last-child {
+  font-weight: bold;
+}
+
+#total-price {
+  text-align: right;
+}
+.game-list {
+  margin: 20px 0;
+}
+
+.game-list h2 {
+  margin-bottom: 10px;
+}
+
+.game-list input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.game-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.game-list li {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.game-list li:hover {
+  background-color: #ddd;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
