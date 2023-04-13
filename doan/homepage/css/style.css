@@ -117,7 +117,7 @@ a {
 .slide-navigator {
     top: 40%;
     z-index: 10;
-    width: 1250px;
+    width: 100%;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -138,9 +138,8 @@ a {
 .swiper {
     max-width: 1200px;
     height: 300px;
-    
   }
-  .swiper-slide {
+.swiper-slide {
     position: absolute;
     z-index: 0;
     font-size: 18px;
@@ -150,9 +149,9 @@ a {
     align-items: center;
   }
 
-  .card-text {
+.card-text {
     padding: 10px;
-  }
+}
   
   .swiper-slide img {
     display: block;
@@ -164,7 +163,6 @@ a {
 .news-section .container{
     border-top: 3px solid grey;
     margin-top: 30px;
-    height: 500px;
 }
 .section-header {
     margin-top: 30px;
@@ -176,12 +174,14 @@ a {
     margin-top: 45px;
     margin-bottom: 30px;
 }
+
 .news-main-card {
 background-color: white;
 border-radius: 5px;
 height: 365px;
 }
-  .news-header {
+
+.news-header {
     display: flex;
     flex-wrap: nowrap;
     border-bottom: 2px solid grey;
@@ -246,16 +246,50 @@ height: 365px;
     padding: 5px;
 }
 
-.owl-nav {
-    font-size: 100px;
+.owl-nav span {
+    font-size: 35px;
+    color: black;
+    line-height: 50%;
+    
+}
+
+
+
+.video-card .owl-nav button {
+    position: absolute;
+    top: 50%;
+    /*left: 50%;*/
+    transform: translate(0%,-50%);
+    height: 50px;
+    width: 50px;
+    background-color: white !important; 
+    border: 2px solid black !important;
+    border-radius: 50% !important;
+}
+
+
+.video-card .owl-nav button.owl-prev {
+    left: 0;
+    z-index: 10;
+}
+.video-card .owl-nav :hover {
+    background-color: rgb(248, 107, 56) !important;
+}
+
+  
+.video-card .owl-nav button.owl-next {
+    right: 0;
+    z-index: 10;
 }
 
 .site-footer {
     background-color: #ced5f0;
+    margin-top: 50px;
+    height: 300px;
 }
 
 .mid-footer {
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 20px;
 }
 .li_menu {

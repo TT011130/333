@@ -1,9 +1,46 @@
-.nav {
-  background-color: coral;
-  position: sticky;
-  z-index: 10;
-  height: 100px;
-  top: 0;
+.wrap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 100px;
+  height: 200px;
+}
+
+.menu-main ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 13px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }
 
 /* Listing Product */
@@ -84,3 +121,48 @@
   right: 0;
 }
 
+/*responsive tablet mobile*/
+
+/*Code phía trên ma da style 1280px => Pc, máy chiếu*/
+
+/* Màn hình tablet xoay ngang, desktop*/
+
+@media screen and (max-width: 1279px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+/* Màn hình mobile xoay ngang, tablet thẳng đứng*/
+@media screen and (max-width: 768px) {
+
+}
+
+/* Màn hình mobile*/
+@media screen and (max-width: 480px) {
+  body {
+    background-color: black;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-main ul li{
+    display: none;
+  }
+  .menu-mobile {
+    display: block;
+  }
+}
+
+
+.content-mobile {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  transition: .5s;
+}
