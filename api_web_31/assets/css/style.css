@@ -21,3 +21,16 @@ img {
 .product-listing .item {
     margin-bottom: 30px;
 }
+
+.banner {
+    background-color: red;
+    width: 100%;
+    height: 500px;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100px;
+}
