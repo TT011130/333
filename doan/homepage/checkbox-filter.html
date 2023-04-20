@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/checkbox-filter.css">
+</head>
+<body>
+    <!-- Filter options -->
+<label>
+    <input type="checkbox" id="filter1" value="filter1">
+    Filter 1
+  </label>
+  <label>
+    <input type="checkbox" id="filter2" value="filter2">
+    Filter 2
+  </label>
+  <label>
+    <input type="checkbox" id="filter3" value="filter3">
+    Filter 3
+  </label>
+  
+  <!-- Button to apply filter -->
+  <button id="applyFilter">Apply Filter</button>
+  <button id="clearFilter">Clear Filter</button>
+  <!-- Content to filter -->
+  <ul id="content">
+    <li>Item 1 (filter1, filter2)</li>
+    <li>Item 2 (filter1, filter3)</li>
+    <li>Item 3 (filter2)</li>
+    <li>Item 4 (filter3)</li>
+  </ul>
+
+  <script src="script/checkbox-filter.js"></script>
+</body>
+</html>

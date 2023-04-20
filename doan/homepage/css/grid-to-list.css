@@ -1,0 +1,54 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-buttons button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .toggle-buttons button.active {
+    color: blue;
+  }
+  
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .items.list {
+    display: block;
+  }
+  
+  .item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .item img {
+    max-width: 100%;
+  }
+  
+  .item h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .item p {
+    font-size: 14px;
+    color: #666;
+  }

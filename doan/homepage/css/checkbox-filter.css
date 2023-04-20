@@ -1,0 +1,4 @@
+/* Hide items that do not match the filter */
+.hide {
+    display: none;
+  }

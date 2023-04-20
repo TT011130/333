@@ -1,94 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-  background-color: #fff;
-  color: #000;
-}
+<html>
+  <head>
+    <title>My Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add any CSS files here -->
+  </head>
+  <body>
+    <button class="theme-button">Switch Theme</button>
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><a class="link" href="#">Home</a></li>
+          <li><a class="link" href="#">About</a></li>
+          <li><a class="link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-body.dark-theme {
-  background-color: #000;
-  color: #fff;
-}
+    <main>
+      
+      <section class="item-card">
+        <h2 class="header">Item 1</h2>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+        <a class="link" href="#">Learn more</a>
+      </section>
 
-.flex-switch {
-  display: inline-block;
-  width: 60px;
-  height: 20px;
-  position: relative;
-}
+      <section class="item-card">
+        <h2 class="header">Item 2</h2>
+        <p class="text">Vivamus scelerisque justo sit amet nisi venenatis, quis gravida odio rutrum.</p>
+        <a class="link" href="#">Learn more</a>
+      </section>
 
-.flex-switch-input {
-  display: none;
-}
+      <section class="item-card">
+        <h2 class="header">Item 3</h2>
+        <p class="text">Pellentesque vel erat placerat, vestibulum lacus in, convallis sapien.</p>
+        <a class="link" href="#">Learn more</a>
+      </section>
+    </main>
 
-.flex-switch-label {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ddd;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.flex-switch-input:checked + .flex-switch-label {
-  background-color: #4CAF50;
-}
-
-.flex-switch-label::after {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  transition: transform 0.3s ease;
-}
-
-.flex-switch-input:checked + .flex-switch-label::after {
-  transform: translateX(35px);
-}
-    </style>
-</head>
-<body>
-    <div class="flex-switch">
-        <input type="checkbox" class="flex-switch-input" id="theme-toggle">
-        <label class="flex-switch-label" for="theme-toggle"></label>
-      </div>
-      <h1 id="theme-header"> Light Theme</h1>
-
-    <script>
-        // Get the theme toggle button and the theme header element
-const themeToggle = document.getElementById("theme-toggle");
-const themeHeader = document.getElementById("theme-header");
-
-// Add an event listener to the theme toggle button
-themeToggle.addEventListener("change", function() {
-  // Get the body element
-  const body = document.body;
-  
-  // Toggle the 'dark-theme' class on the body element
-  body.classList.toggle("dark-theme");
-  
-  // Change the text of the theme header based on the current theme
-  if (body.classList.contains("dark-theme")) {
-    themeHeader.textContent = "Dark Theme";
-  } else {
-    themeHeader.textContent = "Light Theme";
-  }
-});
-    </script>
-</body>
+    <!-- Add any JavaScript files here -->
+    <script src="script/switchtheme.js"></script>
+  </body>
 </html>

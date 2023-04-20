@@ -1,33 +1,81 @@
-// switch-theme.js
-const toggleSwitch = document.querySelector('#theme-switch');
-const themeStyle = document.querySelector('#theme-style');
+function switchTheme() {
+  const navbar = document.querySelector('.navbar');
+  const cards = document.querySelectorAll('.item-card');
+  const textElements = document.querySelectorAll('.text');
+  const linkElements = document.querySelectorAll('.link');
+  const headerElements = document.querySelectorAll('.header');
+  let theme = 'light-theme';
 
-// Function to set the theme style sheet
-function setTheme(theme) {
-  themeStyle.href = `${theme}.css`;
-  localStorage.setItem('theme', theme);
-}
+  // Check if there's a theme preference stored in a cookie
+  const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  if (cookieValue === 'dark-theme') {
+    theme = 'dark-theme';
+  }
 
-// Function to toggle between light and dark mode
-function toggleTheme() {
-  if (toggleSwitch.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    setTheme('dark');
+  // Check the current theme and toggle to the opposite theme
+  if (theme === 'dark-theme') {
+    document.body.classList.remove('dark-theme');
+    document.body.classList.add('light-theme');
+    navbar.classList.remove('navbar-dark');
+    navbar.classList.add('navbar-light');
+    theme = 'light-theme';
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    setTheme('light');
+    document.body.classList.remove('light-theme');
+    document.body.classList.add('dark-theme');
+    navbar.classList.remove('navbar-light');
+    navbar.classList.add('navbar-dark');
+    theme = 'dark-theme';
+  }
+
+  // Store the new theme preference in a cookie
+  document.cookie = `theme=${theme};path=/`;
+
+  // Update the styles for each element based on the new theme
+  if (theme === 'dark-theme') {
+    navbar.style.backgroundColor = '#212121';
+    navbar.style.color = '#ffffff';
+    cards.forEach(card => {
+      card.style.backgroundColor = '#212121';
+      card.style.color = '#ffffff';
+    });
+    textElements.forEach(element => {
+      element.style.color = '#ffffff';
+    });
+    linkElements.forEach(element => {
+      element.style.color = '#00ffff';
+    });
+    headerElements.forEach(element => {
+      element.style.color = '#ffffff';
+    });
+  } else {
+    navbar.style.backgroundColor = '#ffffff';
+    navbar.style.color = '#000000';
+    cards.forEach(card => {
+      card.style.backgroundColor = '#ffffff';
+      card.style.color = '#000000';
+    });
+    textElements.forEach(element => {
+      element.style.color = '#000000';
+    });
+    linkElements.forEach(element => {
+      element.style.color = '#0000ff';
+    });
+    headerElements.forEach(element => {
+      element.style.color = '#000000';
+    });
   }
 }
 
-// Check the local storage for the saved theme preference
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-  setTheme(currentTheme);
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
+const themeButton = document.querySelector('.theme-button');
+themeButton.addEventListener('click', switchTheme);
+
+// Check for a saved theme preference when the page loads
+const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+if (cookieValue === 'dark-theme') {
+  switchTheme();
 }
 
-// Add event listener to the switch button
-toggleSwitch.addEventListener('change', toggleTheme);
+
+
+
+  
