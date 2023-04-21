@@ -13,72 +13,119 @@
     <link rel="stylesheet" href="./lib/owl-carousel/assets/owl.theme.default.min.css">    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img style="width: 30px; height: 30px;" src="images/414-4141650_d20-svg-avatar-20-sided-dice-clip-art.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Boardgame
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Chơi ở đâu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trợ giúp</a>
-                    </li>
-                </ul>
+    <div class="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img style="width: 30px; height: 30px;" src="images/414-4141650_d20-svg-avatar-20-sided-dice-clip-art.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active link" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Boardgame
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item link" href="#">Action</a></li>
+                                <li><a class="dropdown-item link" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active link" aria-current="page" href="#">Chơi ở đâu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active link" aria-current="page" href="#">Trợ giúp</a>
+                        </li>
+                    </ul>
+                    <div class="form-check form-switch theme-button">
+                        <input class="form-check-input" onclick="toggleDarkMode()" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-component="theme-toggle" checked>
+                        <span class="form-check-label light-theme" for="flexSwitchCheckDefault">Nền</span>
+        
+                    </div>
+                    <div class="navbar-nav login">
+                        <button class="nav-link link" onclick="toggleLogin()" href="">Login</button>
+                    </div>
 
-                <div class="form-check form-switch theme">
-                    <input class="form-check-input" onclick="toggleDarkMode()" type="checkbox" role="switch" id="flexSwitchCheckChecked" data-component="theme-toggle" checked>
-                    <span class="form-check-label light-theme" for="flexSwitchCheckDefault">Nền</span>
-                   
-                </div>
-                <div class="navbar-nav login">
-                    <a class="nav-link" href="">Login</a>
-                </div>
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/Group.png" alt=""> VN
-                    </a>
-                <ul class="dropdown-menu language" >
                     
-                    <li><a class="dropdown-item" href="#">VN</a></li>
-                    <li><a class="dropdown-item" href="#">EN</a></li>
-                </ul>
+              
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/Group.png" alt=""> VN
+                        </a>
+                    <ul class="dropdown-menu language" >
+        
+                        <li><a class="dropdown-item link" href="#">VN</a></li>
+                        <li><a class="dropdown-item link" href="#">EN</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </div>
+
+    <div id="login-overlay"></div>
+      
+    <div id="login-form">
+        <form>
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <button type="submit">Submit</button>
+            </form>
         </div>
-    </nav>
 
     <div class="search-section">
         <div class="container">
-            <div class="input-group">
-				<select class="search-filter" id="category" name="category">
-					<option value="">Tất cả</option>
-					<option value="Strategy">Chiến lược</option>
-					<option value="Party">Party</option>
-					<option value="Family">Gia đình</option>
-					<option value="Kids">Kids</option>
-				</select>
-                <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
-                <button class="btn submit bg-primary text-white btn-outline-secondary" type="button" id="button-addon1">Tìm kiếm</button>
+            <div class="row">
+                <div class="search-group">
+                    <form class="control-form">
+                        <select class="search-filter" id="category">
+                            <option value="all">Tất cả</option>
+                            <option value="category1">Boardgame</option>
+                            <option value="category2">Tin tức</option>
+                            <option value="category3">Video</option>
+                          </select>
+                        <div class="search-area">
+                            <input class="search-bar" type="text" id="search" placeholder="Search...">
+                            <div id="results"></div>
+                        </div>
+                    </form>
+                    <button class=" search-button btn submit bg-primary text-white btn-outline-secondary" type="button" id="button-addon1">Tìm kiếm</button>
+                </div>
             </div>
         </div>
     </div>
+    <div class="search-section-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="search-group-mobile">
+                    <form class="control-form-mobile">
+                        <select class="col-12 search-filter-mobile" id="category">
+                            <option value="all">Tất cả</option>
+                            <option value="category1">Boardgame</option>
+                            <option value="category2">Tin tức</option>
+                            <option value="category3">Video</option>
+                          </select>
+                        <div class="col-12 search-area-mobile">
+                            <input class="col-12 search-bar-mobile" type="text" id="search" placeholder="Search...">
+                            <div id="results mobile"></div>
+                        </div>
+                    </form>
+                    <button class="col-12 search-button-mobile btn submit bg-primary text-white btn-outline-secondary" type="button" id="button-addon1">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="hero-section">
         <div class="container">
@@ -92,10 +139,8 @@
                     </div>
                     
                     <div id="tab1" class="tabcontent active">
-                        <div class="slider-main-card">
-                            <div class="background-image">
-                                <img src="images/image 6.png" style="width:1250px; height: 500px;" alt="">
-                            </div>
+                        <div class="col-12 slider-main-card">
+                            <div class="primary-background-image"></div>
                             <div class="thumbnail">
                                 <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
                             </div>
@@ -107,6 +152,26 @@
                                         <li class="player">1-2 người chơi</li>
                                         <li class="time">30 phút chơi</li>
                                         <li class="age">Độ tuổi: 12+</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 slider-main-card-mobile">
+                            <div class="col-12 background-wrapper-mobile">
+                                <div class="primary-background-image"></div>
+                                <div class="thumbnail">
+                                    <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 game-description-mobile">
+                                <div class="game-name-mobile"> Starwar</div>
+                                <div class="rating-mobile">Xếp hạng: 7.9</div>
+                                <div class="col-12 game-info-mobile">
+                                    <ul>
+                                        <li class="col-12 player">1-2 người chơi</li>
+                                        <li class="col-12 time">30 phút chơi</li>
+                                        <li class="col-12 age">Độ tuổi: 12+</li>
                                     </ul>
                                 </div>
                             </div>
@@ -755,6 +820,8 @@
     <script src="./lib/axios/axios.min.js"></script>
 <!-- Import js bootstrap-->
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script/login.js"></script>
+    <script src="script/search.js"></script>
     <script src="script/theme.js"></script>
     <script src="./script/main.js"></script>
 </body>
