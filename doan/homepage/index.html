@@ -51,8 +51,6 @@
                     <div class="navbar-nav login">
                         <button class="nav-link link" onclick="toggleLogin()" href="">Login</button>
                     </div>
-
-                    
               
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,17 +69,59 @@
     <div id="login-overlay"></div>
       
     <div id="login-form">
-        <form>
-            <h2>Login</h2>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <br>
-            <button type="submit">Submit</button>
-            </form>
-        </div>
+        <div class="wrapper">
+            <div class="title-text">
+              <div class="title login">Login Form</div>
+              <div class="title signup">Signup Form</div>
+            </div>
+            <div class="form-container">
+              <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+              </div>
+              <div class="form-inner">
+                <form action="#" class="login">
+                  <pre>
+                  </pre>
+                  <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link"><a href="#">Forgot password?</a></div>
+                  <div class="field btnn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">Create an account <a href="">Signup now</a></div>
+                </form>
+                <form action="#" class="signup">
+                  <div class="field">
+                    <input type="text" placeholder="Name" required>
+                  </div>
+                  <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btnn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                  </div>
+                  <div class="signup-link">Already have an account? <a href="">Login</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
 
     <div class="search-section">
         <div class="container">
@@ -309,11 +349,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab2" class="tabcontent">
-                        <div class="slider-main-card">
-                            <div class="background-image">
-                                <img src="images/image 6.png" style="width:1300px; height: 500px;" alt="">
-                            </div>
+                    <div id="tab2" class="tabcontent ">
+                        <div class="col-12 slider-main-card">
+                            <div class="primary-background-image"></div>
                             <div class="thumbnail">
                                 <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
                             </div>
@@ -325,6 +363,26 @@
                                         <li class="player">1-2 người chơi</li>
                                         <li class="time">30 phút chơi</li>
                                         <li class="age">Độ tuổi: 12+</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 slider-main-card-mobile">
+                            <div class="col-12 background-wrapper-mobile">
+                                <div class="primary-background-image"></div>
+                                <div class="thumbnail">
+                                    <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 game-description-mobile">
+                                <div class="game-name-mobile"> Starwar</div>
+                                <div class="rating-mobile">Xếp hạng: 7.9</div>
+                                <div class="col-12 game-info-mobile">
+                                    <ul>
+                                        <li class="col-12 player">1-2 người chơi</li>
+                                        <li class="col-12 time">30 phút chơi</li>
+                                        <li class="col-12 age">Độ tuổi: 12+</li>
                                     </ul>
                                 </div>
                             </div>
@@ -342,113 +400,129 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="tab3" class="tabcontent">
-                        <div class="slider-main-card">
-                            <div class="background-image">
-                                <img src="images/image 6.png" style="width:1300px; height: 500px;" alt="">
-                            </div>
+                    <div id="tab3" class="tabcontent ">
+                        <div class="col-12 slider-main-card">
+                            <div class="primary-background-image"></div>
                             <div class="thumbnail">
                                 <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
                             </div>
@@ -460,6 +534,26 @@
                                         <li class="player">1-2 người chơi</li>
                                         <li class="time">30 phút chơi</li>
                                         <li class="age">Độ tuổi: 12+</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 slider-main-card-mobile">
+                            <div class="col-12 background-wrapper-mobile">
+                                <div class="primary-background-image"></div>
+                                <div class="thumbnail">
+                                    <img src="images/image 5.png" style="width: 300px; height: 400px;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 game-description-mobile">
+                                <div class="game-name-mobile"> Starwar</div>
+                                <div class="rating-mobile">Xếp hạng: 7.9</div>
+                                <div class="col-12 game-info-mobile">
+                                    <ul>
+                                        <li class="col-12 player">1-2 người chơi</li>
+                                        <li class="col-12 time">30 phút chơi</li>
+                                        <li class="col-12 age">Độ tuổi: 12+</li>
                                     </ul>
                                 </div>
                             </div>
@@ -477,103 +571,121 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                   <div class="swiper-slide card">
-                                    <img src="./images/image 7.png" style="height: 150px;" alt="">
-                                    <div class="card-text">
-                                        <h3 class="card-title">
-                                            2 -- Stationfall
-                                        </h3>
-                                        <p class="card-description">
-                                            Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
-                                        </p>
-                                    </div>
+                                    <a href="#">
+                                        <img src="./images/image 7.png" style="height: 150px;" alt="">
+                                        <div class="card-text">
+                                            <h3 class="card-title">
+                                                2 -- Stationfall
+                                            </h3>
+                                            <p class="card-description">
+                                                Một trò chơi tống tiền và phản bội, giết người và hỗn loạn, nguy hiểm và hủy diệt.
+                                            </p>
+                                        </div>
+                                    </a>
                                   </div>
                                 </div>
                             </div>
